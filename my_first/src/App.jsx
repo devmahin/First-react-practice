@@ -10,6 +10,7 @@ function App() {
     <>
       <h1>Vite + React</h1>
       <Person></Person>
+      <student></student>
     </>
   )
 }
@@ -23,7 +24,13 @@ function App() {
 
 
   function student (){
-    
+    return (<div>
+       <p>Name : </p>
+      <p>gat : </p>
+      <p>years : </p>
+      <p>age : </p>
+     </div>
+    ) 
   }
 
 
