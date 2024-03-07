@@ -10,9 +10,16 @@ function App() {
     <>
       <h1>Vite + React</h1>
       <Person></Person>
-      <student></student>
+      <studen></studen>
     </>
   )
+}
+
+
+function studen (){
+  let name = "mahin";
+  let age = 34;
+  return <h1>My name is {name} . I am {age} years old</h1>;
 }
 
 
@@ -23,15 +30,6 @@ function App() {
   }
 
 
-  function student (){
-    return (<div>
-       <p>Name : </p>
-      <p>gat : </p>
-      <p>years : </p>
-      <p>age : </p>
-     </div>
-    ) 
-  }
 
 
 
