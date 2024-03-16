@@ -27,7 +27,8 @@ function Main() {
     if (!fin) {
       setCurrentCook([...curren, currenProduct]);
     }
-   
+    const fil = cook.filter(val=> val.recipe_id !== currenProduct.recipe_id)
+    setCook(fil);
   
   }
 
