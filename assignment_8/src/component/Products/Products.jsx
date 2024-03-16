@@ -14,7 +14,6 @@ function Products({wantToCookHandel}) {
     };
     dataLoad();
   }, []);
-  console.log(apiData);
 
   return (
     <div className="grid text-start grid-cols-2 gap-4">

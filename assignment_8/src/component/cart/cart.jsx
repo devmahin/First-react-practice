@@ -1,9 +1,12 @@
-const Cart = ({cook}) => {
-    
+import WantCook from "../wantCook/WantCook";
+
+const Cart = ({product}) => {
+    // console.log(product)
+
   return (
     <div className="border-solid rounded-lg border-2 border-gray-300">
       <div className="w-4/5 mx-auto">
-        <h1>Want to cook: 01</h1>
+        <h1>Want to cook: </h1>
         <hr />
       </div>
       <div>
@@ -20,18 +23,9 @@ const Cart = ({cook}) => {
             </thead>
 
             <tbody>
-            <tr className="">
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist Lorem ipsum dolor, sit amet consectetur adipisicing elit</td>
-              <td>Blue</td>
+                
+            {product.map((val,index) => <WantCook products={val} productsIndex={index} key={index}></WantCook>)}
            
-                <td className="">
-                <button className="py-2 px-3 rounded-full font-bold bg-[#0BE58A] border-none">
-                Preparing
-              </button>
-              </td>
-            </tr>
             </tbody>
           </table>
         </div>

@@ -1,20 +1,18 @@
 import { useState } from "react";
 import Products from "../Products/Products";
 import Cart from "../cart/cart";
-import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 function Main() {
   // Want to cook:
   const [cook, setCook] = useState([]);
   const wantToCookHandel = (product) => {
-    const fin = cook.find((val) => val.id === product.id);
-    if (!fin) {
-      toast.success("Wow so easy !");
-      setCook([...cook, product]);
+    const fin = cook.find((val) => val.recipe_id === product.recipe_id);
+    if(!fin){
+      setCook([...cook, product ])
     }
   };
-
+console.log(cook)
   return (
     <div className="text-center">
       <h1 className="text-4xl">Our Recipes</h1>
@@ -28,10 +26,9 @@ function Main() {
           <Products wantToCookHandel={wantToCookHandel}></Products>
         </div>
         <div className="col-span-2">
-          {cook.map((val,index) => <Cart key={index} cook={val}></Cart>)}
+          <Cart product={cook}></Cart>
         </div>
       </div>
-      <ToastContainer></ToastContainer>
     </div>
   );
 }
