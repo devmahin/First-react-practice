@@ -3,7 +3,7 @@ const CurrentCook = ({productCur,curIndex}) => {
     return (
         <>
             <tr className="">
-              <th>{curIndex}</th>
+              <th>{curIndex + 1}</th>
               <td>{recipe_name}</td>
               <td>{preparing_time}</td>
               <td>{calories}</td>

@@ -1,5 +1,6 @@
 import WantCook from "../wantCook/WantCook";
 import CurrentCook from "../currentCook/CurrentCook";
+import Total from "../total/Total";
 
 const Cart = ({ product ,currentlyCookHandel,curren}) => {
   // console.log(product)
@@ -61,12 +62,10 @@ const Cart = ({ product ,currentlyCookHandel,curren}) => {
           </tbody>
         </table>
       </div>
+            <div>
+            <Total currentTotal={curren} ></Total>
+            </div>
 
-      {/* total  */}
-      <div>
-        <p>Total Time = 45 minutes</p>
-        <p>Total Calories = 1050 calories</p>
-      </div>
     </div>
   );
 };
