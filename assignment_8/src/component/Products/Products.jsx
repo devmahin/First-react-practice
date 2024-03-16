@@ -15,6 +15,9 @@ function Products({wantToCookHandel}) {
     dataLoad();
   }, []);
 
+
+
+  
   return (
     <div className="grid text-start grid-cols-2 gap-4">
       {apiData.map((val,i) => <Product key={i} wantToCookHandel={wantToCookHandel} product={val}></Product>)}

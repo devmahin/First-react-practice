@@ -1,18 +1,9 @@
-import { useState } from "react";
 import WantCook from "../wantCook/WantCook";
 import CurrentCook from "../currentCook/CurrentCook";
 
-const Cart = ({ product }) => {
+const Cart = ({ product ,currentlyCookHandel,curren}) => {
   // console.log(product)
 
-  const [curren, setCurrentCook] = useState([]);
-
-  function currentlyCookHandel(currenProduct) {
-    const fin = curren.find((val) => val.recipe_id === currenProduct.recipe_id);
-    if (!fin) {
-      setCurrentCook([...curren, currenProduct]);
-    }
-  }
   
   return (
     <div className="border-solid rounded-lg border-2 border-gray-300">

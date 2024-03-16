@@ -1,28 +1,37 @@
 import { useState } from "react";
 import Products from "../Products/Products";
 import Cart from "../cart/cart";
-import { ToastContainer, toast } from 'react-toastify';
-
-  import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "react-toastify/dist/ReactToastify.css";
 function Main() {
   // Want to cook:
   const [cook, setCook] = useState([]);
   const wantToCookHandel = (product) => {
     const fin = cook.find((val) => val.recipe_id === product.recipe_id);
-    if(!fin){
-      toast.success("Success add !",{
-        autoClose: 2000
+    if (!fin) {
+      toast.success("Success add !", {
+        autoClose: 2000,
       });
-      setCook([...cook, product ])
-    }else{
-      toast.warn("Already exist",{
-        autoClose: 2000
+      setCook([...cook, product]);
+    } else {
+      toast.warn("Already exist", {
+        autoClose: 2000,
       });
     }
   };
-console.log(cook)
+ 
+  const [curren, setCurrentCook] = useState([])
+  function currentlyCookHandel(currenProduct) {
+    const fin = curren.find((val) => val.recipe_id === currenProduct.recipe_id);
+    if (!fin) {
+      setCurrentCook([...curren, currenProduct]);
+    }
+   
+  
+  }
+
+
   return (
     <div className="text-center">
       <h1 className="text-4xl">Our Recipes</h1>
@@ -36,7 +45,7 @@ console.log(cook)
           <Products wantToCookHandel={wantToCookHandel}></Products>
         </div>
         <div className="col-span-2">
-          <Cart product={cook}></Cart>
+          <Cart curren={curren} currentlyCookHandel={currentlyCookHandel} product={cook}></Cart>
         </div>
       </div>
       <ToastContainer />
