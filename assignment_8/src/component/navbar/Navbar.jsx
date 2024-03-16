@@ -2,9 +2,9 @@ import { CiSearch } from "react-icons/ci";
 const Navbar = () => {
   return (
     <div className="">
-      <div className="navbar justify-between items-center bg-base-100">
+      <div className="navbar p-0 justify-between items-center bg-base-100">
         <div className="">
-          <a className="btn btn-ghost text-2xl lg:text-3xl">Recipe Calories</a>
+          <a className="font-semibold text-2xl lg:text-3xl">Recipe Calories</a>
         </div>
 
         <div className="hidden lg:flex gap-x-10 ">
@@ -61,3 +61,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

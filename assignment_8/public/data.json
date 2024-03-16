@@ -1,0 +1,62 @@
+
+
+
+
+
+[
+    {
+      "recipe_id": 1,
+      "recipe_name": "Spaghetti Bolognese",
+      "recipe_image": "https://i.ibb.co/R7CtmNg/download-1.jpg",
+      "short_description": "Classic Italian pasta dish with rich tomato sauce and minced beef.",
+      "ingredients": ["400g spaghetti", "500g minced beef", "1 onion", "2 garlic cloves", "400g canned tomatoes", "50g grated parmesan cheese"],
+      "preparing_time": "45 min",
+      "calories": "480 calories"
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Chicken Caesar Salad",
+      "recipe_image": "https://i.ibb.co/F5ctZHs/download.jpg",
+      "short_description": "Refreshing salad with grilled chicken, crisp lettuce, and Caesar dressing.",
+      "ingredients": ["300g chicken breast", "1 head romaine lettuce", "50g croutons", "30g grated parmesan cheese", "3 tbsp Caesar dressing", "1 lemon"],
+      "preparing_time": "25 min",
+      "calories": "320 calories"
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Vegetable Stir Fry",
+      "recipe_image": "https://i.ibb.co/TbhgzVz/download-3.jpg",
+      "short_description": "Healthy and colorful stir-fried vegetables with a savory sauce.",
+      "ingredients": ["200g broccoli", "150g bell peppers", "100g carrots", "100g snow peas", "2 tbsp soy sauce", "1 tbsp sesame oil"],
+      "preparing_time": "20 min",
+      "calories": "180 calories"
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Beef Tacos",
+      "recipe_image": "https://i.ibb.co/j4xc2fR/download-2.jpg",
+      "short_description": "Tasty Mexican tacos filled with seasoned beef, salsa, and toppings.",
+      "ingredients": ["500g ground beef", "1 packet taco seasoning", "8 taco shells", "1 tomato", "1 onion", "100g shredded cheddar cheese"],
+      "preparing_time": "35 min",
+      "calories": "380 calories"
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Mushroom Risotto",
+      "recipe_image": "https://i.ibb.co/z44F7X6/images-2.jpg",
+      "short_description": "Creamy and flavorful Italian rice dish with mushrooms and parmesan cheese.",
+      "ingredients": ["300g Arborio rice", "200g mushrooms", "1 onion", "2 cloves garlic", "1L vegetable broth", "50g grated parmesan cheese"],
+      "preparing_time": "40 min",
+      "calories": "420 calories"
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Grilled Salmon with Asparagus",
+      "recipe_image": "https://i.ibb.co/7NZH3Dh/images-1.jpg",
+      "short_description": "Healthy grilled salmon served with tender asparagus spears.",
+      "ingredients": ["4 salmon fillets", "300g asparagus", "2 tbsp olive oil", "1 lemon", "Salt and pepper to taste", "Fresh dill for garnish"],
+      "preparing_time": "30 min",
+      "calories": "350 calories"
+    }
+  ]
+  
