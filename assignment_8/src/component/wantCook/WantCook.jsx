@@ -1,6 +1,6 @@
-import { useState } from "react";
 
-const WantCook = ({products,productsIndex}) => {
+
+const WantCook = ({products,productsIndex,currentlyCookHandel}) => {
     // console.log(products)
     
     const {preparing_time,recipe_name,calories} = products;
@@ -13,7 +13,7 @@ const WantCook = ({products,productsIndex}) => {
               <td>{calories}</td>
            
                 <td className="">
-                <button className="py-2 px-3 rounded-full font-bold bg-[#0BE58A] border-none">
+                <button onClick={() =>currentlyCookHandel(products)} className="py-2 px-3 rounded-full cursor-pointer font-bold bg-[#0BE58A] border-none">
                 Preparing
               </button>
               </td>

@@ -1,12 +1,23 @@
+import { useState } from "react";
 import WantCook from "../wantCook/WantCook";
+import CurrentCook from "../currentCook/CurrentCook";
 
-const Cart = ({product}) => {
-    // console.log(product)
+const Cart = ({ product }) => {
+  // console.log(product)
 
+  const [curren, setCurrentCook] = useState([]);
+
+  function currentlyCookHandel(currenProduct) {
+    const fin = curren.find((val) => val.recipe_id === currenProduct.recipe_id);
+    if (!fin) {
+      setCurrentCook([...curren, currenProduct]);
+    }
+  }
+  
   return (
     <div className="border-solid rounded-lg border-2 border-gray-300">
       <div className="w-4/5 mx-auto">
-        <h1>Want to cook: </h1>
+        <h1>Want to cook: {product.length}</h1>
         <hr />
       </div>
       <div>
@@ -23,18 +34,22 @@ const Cart = ({product}) => {
             </thead>
 
             <tbody>
-                
-            {product.map((val,index) => <WantCook products={val} productsIndex={index} key={index}></WantCook>)}
-           
+              {product.map((val, index) => (
+                <WantCook
+                  products={val}
+                  currentlyCookHandel={currentlyCookHandel}
+                  productsIndex={index}
+                  key={index}
+                ></WantCook>
+              ))}
             </tbody>
           </table>
         </div>
       </div>
-   
 
       {/* \Currently cooking: 02 */}
       <div className="w-4/5 mx-auto">
-        <h1>Currently cooking: 02</h1>
+        <h1>Currently cooking: {curren.length}</h1>
         <hr />
       </div>
       <div className="overflow-x-auto">
@@ -49,13 +64,9 @@ const Cart = ({product}) => {
             </tr>
           </thead>
           <tbody className="">
-            {/* row 1 */}
-            <tr className="">
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>600 calories</td>
-            </tr>
+            {curren.map((val, index) => (
+              <CurrentCook productCur={val} curIndex={index} key={index}></CurrentCook>
+            ))}
           </tbody>
         </table>
       </div>

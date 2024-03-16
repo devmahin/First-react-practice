@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Products from "../Products/Products";
 import Cart from "../cart/cart";
+import { ToastContainer, toast } from 'react-toastify';
+
+  import 'react-toastify/dist/ReactToastify.css';
 
 import "react-toastify/dist/ReactToastify.css";
 function Main() {
@@ -9,7 +12,14 @@ function Main() {
   const wantToCookHandel = (product) => {
     const fin = cook.find((val) => val.recipe_id === product.recipe_id);
     if(!fin){
+      toast.success("Success add !",{
+        autoClose: 2000
+      });
       setCook([...cook, product ])
+    }else{
+      toast.warn("Already exist",{
+        autoClose: 2000
+      });
     }
   };
 console.log(cook)
@@ -29,6 +39,7 @@ console.log(cook)
           <Cart product={cook}></Cart>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
